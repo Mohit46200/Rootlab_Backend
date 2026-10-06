@@ -17,7 +17,7 @@ const headers = {
 const app = express();
 app.use(cors({ origin: "https://rootlab.memohit.space",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"], }));
+    }));
 app.use(express.json());
 
 // 1) Create a Cashfree order
