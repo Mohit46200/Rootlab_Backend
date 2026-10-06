@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 
-const { CASHFREE_APP_ID, CASHFREE_SECRET_KEY, CASHFREE_ENV = "sandbox", FRONTEND_URL = "http://localhost:5173", PORT = 4000 } = process.env;
+const { CASHFREE_APP_ID, CASHFREE_SECRET_KEY, CASHFREE_ENV = "production", FRONTEND_URL = "http://localhost:5173", PORT = 4000 } = process.env;
 const BASE = CASHFREE_ENV === "production" ? "https://api.cashfree.com/pg" : "https://sandbox.cashfree.com/pg";
 const PRICE = 5; // rupees per method (the server decides the amount, never the browser)
 const VALID = ["bisection", "newton", "regula", "iterative", "secant"];
